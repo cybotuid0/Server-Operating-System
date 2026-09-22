@@ -1,6 +1,6 @@
 ===BEGIN DHCP SUBMISSION===
 student_id: 6705142012
-timestamp: 2026-09-22T14:42:33Z
+timestamp: 2026-09-22T14:46:12Z
 hostname: ubuntu
 ---[dhcpd.conf]---
 default-lease-time 21600;
@@ -27,9 +27,7 @@ Config file: /etc/dhcp/dhcpd.conf
 Database file: /var/lib/dhcp/dhcpd.leases
 PID file: /var/run/dhcpd.pid
 ---[service status]---
-failed
-inactive
-inactive/unknown
+active
 ---[integrity]---
 conf_sha256: b718296ca53cbda55e359b96775bd9ab9967be9bd17f49a4a81ac268ee6c14f7
 ===END DHCP SUBMISSION===
