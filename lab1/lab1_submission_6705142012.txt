@@ -1,6 +1,6 @@
 ===BEGIN LAB1 SUBMISSION===
 student_id: 6705142012
-timestamp: 2026-09-22T13:55:21Z
+timestamp: 2026-09-22T14:17:28Z
 hostname: ubuntu
 ---[user: getent passwd]---
 kanya174:x:1001:1001::/home/kanya174:/bin/bash
@@ -9,7 +9,7 @@ qa:x:1002:kanya174
 ---[user-in-group: id]---
 uid=1001(kanya174) gid=1001(kanya174) groups=1001(kanya174),1002(qa)
 ---[file stat: home file mode/owner]---
-/home/kanya174/report_3783.txt mode=644 owner=UNKNOWN group=root
+/home/kanya174/report_3783.txt mode=755 owner=kanya174 group=qa
 ---[sshd effective config]---
 port 2322
 permitrootlogin yes
