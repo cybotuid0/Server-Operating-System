@@ -1,19 +1,19 @@
 ===BEGIN LAB1 SUBMISSION===
 student_id: 6705142012
-timestamp: 2026-09-22T13:48:50Z
+timestamp: 2026-09-22T13:55:21Z
 hostname: ubuntu
 ---[user: getent passwd]---
-(MISSING user kanya174)
+kanya174:x:1001:1001::/home/kanya174:/bin/bash
 ---[group: getent group]---
-qa:x:1004:kenya147,kenya174
+qa:x:1002:kanya174
 ---[user-in-group: id]---
-(cannot id kanya174)
+uid=1001(kanya174) gid=1001(kanya174) groups=1001(kanya174),1002(qa)
 ---[file stat: home file mode/owner]---
-(MISSING file report_3783.txt)
+/home/kanya174/report_3783.txt mode=644 owner=UNKNOWN group=root
 ---[sshd effective config]---
 port 2322
 permitrootlogin yes
 passwordauthentication yes
 ---[integrity]---
-sshd_sha256: 94b43d642a0a7462b75ca0a105fa9af59f27320534f3df5ff046cce4596aed5b
+sshd_sha256: c801bfae4171de180b0b701cbaae0277d3e4722a9e14dd5ac6abd504e5302453
 ===END LAB1 SUBMISSION===
