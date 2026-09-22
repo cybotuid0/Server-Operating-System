@@ -1,11 +1,11 @@
 ===BEGIN LAB1 SUBMISSION===
 student_id: 6705142012
-timestamp: 2026-09-22T13:43:21Z
+timestamp: 2026-09-22T13:48:50Z
 hostname: ubuntu
 ---[user: getent passwd]---
 (MISSING user kanya174)
 ---[group: getent group]---
-qa:x:1004:kenya147
+qa:x:1004:kenya147,kenya174
 ---[user-in-group: id]---
 (cannot id kanya174)
 ---[file stat: home file mode/owner]---
