@@ -1,47 +1,35 @@
 ===BEGIN DHCP SUBMISSION===
 student_id: 6705142012
-timestamp: 2026-09-08T03:36:28Z
+timestamp: 2026-09-22T14:42:33Z
 hostname: ubuntu
 ---[dhcpd.conf]---
-# Global settings
 default-lease-time 21600;
-max-lease-time 7200;
+max-lease-time 21600;
 authoritative;
 
-# Subnet declaration — matches enp1s0 (172.30.1.2/24)
 subnet 192.168.132.0 netmask 255.255.255.0 {
-  range 192.168.132.76 192.168.132.176;
-  option routers 192.168.132.1;
-  option subnet-mask 255.255.255.0;
-  option broadcast-address 192.168.132.255;
-  option domain-name-servers 8.8.8.8, 8.8.4.4;
-  option domain-name "lab.local";
-  option interface-mtu 1450;
-}
+    range 192.168.132.76 192.168.132.176;
+    option routers 192.168.132.1;
+    option subnet-mask 255.255.255.0;
 
-host reserved-client{
-  hardware ethernet 52:54:00:4c:30:96;
-  fixed_address 192.168.132.234;
+    host reserved-client {
+        hardware ethernet 52:54:00:4c:30:96;
+        fixed-address 192.168.132.234;
+    }
 }
 ---[config syntax test: dhcpd -t]---
 Internet Systems Consortium DHCP Server 4.4.3-P1
 Copyright 2004-2022 Internet Systems Consortium.
 All rights reserved.
 For info, please visit https://www.isc.org/software/dhcp/
-/etc/dhcp/dhcpd.conf line 19: semicolon expected.
-  fixed_address 192.
-                 ^
-Configuration file errors encountered -- exiting
-
-If you think you have received this message due to a bug rather
-than a configuration issue please read the section on submitting
-bugs on either our web page at www.isc.org or in the README file
-before submitting a bug.  These pages explain the proper
-process and the information we find helpful for debugging.
-
-exiting.
+WARNING: Host declarations are global.  They are not limited to the scope you declared them in.
+Config file: /etc/dhcp/dhcpd.conf
+Database file: /var/lib/dhcp/dhcpd.leases
+PID file: /var/run/dhcpd.pid
 ---[service status]---
-active
+failed
+inactive
+inactive/unknown
 ---[integrity]---
-conf_sha256: b7d6f96d7f76f395869648781d18d8b058813d7b75f78fa29199104df7586774
+conf_sha256: b718296ca53cbda55e359b96775bd9ab9967be9bd17f49a4a81ac268ee6c14f7
 ===END DHCP SUBMISSION===
